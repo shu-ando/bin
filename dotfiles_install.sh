@@ -1,16 +1,25 @@
-#!/bin/bash
-test -f ~/.bash_profile && rm ~/.bash_profile
-ln -s ~/dotfiles/profile ~/.bash_profile
+#!/usr/bin/env bash
+[[ -f ~/.bash_profile ]] && rm ~/.bash_profile
+ln -s ~/dotfiles/bash_profile ~/.bash_profile
 
-test -f ~/.bashrc && rm ~/.bashrc
+[[ -f ~/.bash_profile.local ]] && rm ~/.bash_profile.local
+ln -s ~/dotfiles/bash_profile.local ~/.bash_profile.local
+
+[[ -f ~/.bashrc ]] && rm ~/.bashrc
 ln -s ~/dotfiles/bashrc ~/.bashrc
 
-test -f ~/.vimrc && rm ~/.vimrc
+[[ -f ~/.bashrc.local ]] && rm ~/.bashrc.local
+ln -s ~/dotfiles/bashrc.local ~/.bashrc.local
+
+[[ -f ~/.vimrc ]] && rm ~/.vimrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
 
-test -f ~/.dircolors && rm ~/.dircolors
+[[ -f ~/.nvimrc ]] && rm ~/.nvimrc
+ln -s ~/dotfiles/vimrc ~/.nvimrc
+
+[[ -f ~/.dircolors ]] && rm ~/.dircolors
 ln -s ~/dotfiles/dircolors ~/.dircolors
 
-test -f ~/.tmux.conf && rm ~/.tmux.conf
+[[ -f ~/.tmux.conf ]] && rm ~/.tmux.conf
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
