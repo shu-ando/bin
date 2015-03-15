@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Vivid tone.
 echo -e "\e]4;16;#E60012\a"

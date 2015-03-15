@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 BACKGROUND="\e[48;5;232m"
 FLAG1=""
